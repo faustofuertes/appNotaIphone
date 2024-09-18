@@ -1,0 +1,22 @@
+{
+  "notas": [
+    {
+      "id": "5927",
+      "titulo": "Parciales",
+      "cuerpo": "estadística 25/09\n\nlaboratorio 30/09\n\nbase de datos 03/10\n",
+      "fecha": "17/9/2024"
+    },
+    {
+      "id": "aa7c",
+      "titulo": "Compras",
+      "cuerpo": "2 leches 2 kilo de papa 3 kilos de banana 5 kilos de kiwi 50 paltas\n",
+      "fecha": "17/9/2024"
+    },
+    {
+      "id": "8498",
+      "titulo": "Gala",
+      "cuerpo": "tenes que ir a bañar a gala\n",
+      "fecha": "17/9/2024"
+    }
+  ]
+}
