@@ -1,4 +1,10 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+
 body{
+    background-color: white;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     display: flex;
     flex-wrap: nowrap;
@@ -13,7 +19,7 @@ body{
     width: 375px;
     margin: auto;
     border-radius: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .5); /* Sombra para darle profundidad */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
 }
 
 .pantalla h3{
@@ -62,7 +68,6 @@ body{
     border-radius: 7px;
     text-align: left;
     border: none;
-    cursor: pointer;
 }
 
 #notas::-webkit-scrollbar {
@@ -92,7 +97,7 @@ body{
     background-color: #1C1C1E;
     color: white;
     width: 100%;
-    height: 60px;
+    height: 70px;
     border-radius: 7px;
     text-align: left;
     border: none;
@@ -100,11 +105,13 @@ body{
 }
 
 .nota ul{
+    font-weight: bold;
     list-style: none;
     height: 80%;
 }
 
 .nota ul li:nth-child(2){
+    margin-right: 5px;
     color: #BDBDBD;
     font-weight: 100;
 }
@@ -112,14 +119,14 @@ body{
 .linea-separacion {
     height: 1px; /* Altura de la línea */
     background-color: #2C2C2E; /* Color de la línea */
-    margin: 20px 0; /* Espaciado arriba y abajo */
+    margin: 10px 0; /* Espaciado arriba y abajo */
 }
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1C1C1E; /* Fondo negro con opacidad 0.8 */
+    background-color: rgba(28, 28, 30, 0.7); /* Fondo negro con opacidad 0.7 */
     width: 100%;
     height: 80px;
     border-radius: 0 0 40px 40px;
@@ -253,9 +260,58 @@ body{
 } 
 
 
+/* DISEÑO MENU OPCIONES */
+.menu-opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(28, 28, 30, 0.8); /* Color translúcido */
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    z-index: 1000;
+    left: 900px;
+    top: 57px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
+    opacity: 0; /* Opacidad inicial */
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
 
+#eliminarNota {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: transparent; /* Fondo transparente para que el color de fondo del menú se vea */
+    margin-top: 10px;
+}
 
+.menu-opciones.show {
+    display: block; /* Cambia a block para que sea visible */
+    opacity: 1; /* Opacidad completa */
+    transform: translateY(0); /* Restablece el desplazamiento */
+}
 
+.boton-circular{
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    border-color: grey;
+    background-color: #1C1C1E;
+}
 
-
+.boton-circular.selected{
+    background-color: #3C3C3E; /* Color de fondo cuando está seleccionado */
+    transform: scale(1.05); /* Aumenta un poco el tamaño cuando está seleccionado */
+}
 

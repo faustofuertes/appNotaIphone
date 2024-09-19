@@ -5,7 +5,7 @@ export var cantNotas = 0;
 const textoNotas = document.getElementById('cantNotas');
 
 
-//BOTON NUEVA NOTA
+//BOTON NUEVA NOTA 
  const btnAñadirNota = document.getElementById('nuevaNota');
  btnAñadirNota.addEventListener('click', () =>{
 
@@ -36,6 +36,7 @@ const textoNotas = document.getElementById('cantNotas');
           }
 
  });
+
 
 export function añadirNota(nuevaNota) {
 
@@ -109,8 +110,28 @@ containerNotas.addEventListener('scroll', () => {
     }, 1000);
 });
 
-//PRUEBA ELIMINACION.
 const btnOpciones = document.getElementById('opciones');
-btnOpciones.addEventListener('click', ()=>{
-    deleteNota();
-})
+btnOpciones.addEventListener('click', () => {
+    const menuOpciones = document.getElementsByClassName('menu-opciones')[0];
+
+    if (menuOpciones.classList.contains('show')) {
+        menuOpciones.classList.remove('show'); // Oculta el menú
+        setTimeout(() => {
+            menuOpciones.style.display = 'none'; // Oculta el elemento después de la animación
+        }, 300); // Espera el tiempo de la transición antes de ocultarlo
+    } else {
+        menuOpciones.style.display = 'block'; // Muestra el menú
+        setTimeout(() => {
+            menuOpciones.classList.add('show'); // Agrega la clase para la animación
+        }, 10); // Pequeña espera para que el display block se aplique antes de agregar la clase
+
+        const btnEliminar = document.getElementById('eliminarNota');
+        btnEliminar.addEventListener('click', () =>{
+            //aca va el codigo de que aparezcan los botones
+        })
+    }
+});
+
+
+
+
